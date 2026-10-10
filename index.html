@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Paw | Cozy Dog Hotel & Pet Sitting Services</title>
+    <meta name="description" content="Professional and loving dog hotel and sitting service. Comfortable stay, 3x daily walks, 24/7 video surveillance, and custom food calculator.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🐾</span> Happy Paw
+            </a>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                <a href="#calculator">Calculator</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact" class="btn-nav">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Professional Dog Hotel & Sitting</span>
+                    <h1>A Loving Hotel for Your Dog While You're Away</h1>
+                    <p>Give your furry friend a safe, joyful, and cozy vacation with round-the-clock care, fun activities, and personal attention.</p>
+                    <div class="hero-actions">
+                        <a href="#calculator" class="btn btn-primary">Calculate Price</a>
+                        <a href="#features" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Happy dog smiling" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Dogs Love Staying With Us</h2>
+                    <p>We provide a stress-free environment tailored to your pet's needs</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🌳</div>
+                        <h3>3x Daily Walks</h3>
+                        <p>Active and engaging outdoor walks in safe, green areas tailored to your dog's energy level.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🏡</div>
+                        <h3>Enclosed Area</h3>
+                        <p>Secure, fenced yard for free running, playing, and socializing safely under supervision.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📹</div>
+                        <h3>Video Surveillance</h3>
+                        <p>Peace of mind for owners with 24/7 camera access to check in on your beloved pet anytime.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3>Daily Photo Reports</h3>
+                        <p>Regular updates, photos, and heartwarming stories sent directly to your phone every day.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator / Booking Constructor Section -->
+        <section id="calculator" class="calculator-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Stay & Care Constructor</h2>
+                    <p>Build a personalized stay package and calculate the exact cost in real-time</p>
+                </div>
+
+                <div class="calculator-wrapper">
+                    <div class="calculator-card">
+                        
+                        <!-- Step 1: Dog Size -->
+                        <div class="calc-step active" data-step="1">
+                            <h3>Step 1: Choose your dog's size</h3>
+                            <div class="size-options">
+                                <button type="button" class="size-card" data-size="small" data-price="300">
+                                    <span class="size-emoji">🐶</span>
+                                    <h4>Small</h4>
+                                    <p class="size-desc">Up to 10 kg</p>
+                                    <span class="size-price">300 UAH / day</span>
+                                </button>
+                                <button type="button" class="size-card selected" data-size="medium" data-price="400">
+                                    <span class="size-emoji">🐕</span>
+                                    <h4>Medium</h4>
+                                    <p class="size-desc">10 - 25 kg</p>
+                                    <span class="size-price">400 UAH / day</span>
+                                </button>
+                                <button type="button" class="size-card" data-size="large" data-price="500">
+                                    <span class="size-emoji">🦮</span>
+                                    <h4>Large</h4>
+                                    <p class="size-desc">Over 25 kg</p>
+                                    <span class="size-price">500 UAH / day</span>
+                                </button>
+                            </div>
+                            <div class="calc-navigation">
+                                <button type="button" class="btn btn-primary next-step">Next Step &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Duration -->
+                        <div class="calc-step" data-step="2">
+                            <h3>Step 2: How many days will the stay be?</h3>
+                            <div class="duration-group">
+                                <label for="daysInput">Number of days:</label>
+                                <div class="number-input-wrapper">
+                                    <button type="button" id="decreaseDays">-</button>
+                                    <input type="number" id="daysInput" min="1" max="365" value="3">
+                                    <button type="button" id="increaseDays">+</button>
+                                </div>
+                            </div>
+                            <div class="calc-navigation">
+                                <button type="button" class="btn btn-secondary prev-step">&larr; Back</button>
+                                <button type="button" class="btn btn-primary next-step">Next Step &rarr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Additional Care -->
+                        <div class="calc-step" data-step="3">
+                            <h3>Step 3: Choose additional care services</h3>
+                            <div class="addons-group">
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="Nail trimming" data-price="150">
+                                    <div class="addon-content">
+                                        <span class="addon-title">✂️ Nail Trimming</span>
+                                        <span class="addon-price">+150 UAH</span>
+                                    </div>
+                                </label>
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="Bath & Brushing" data-price="300">
+                                    <div class="addon-content">
+                                        <span class="addon-title">🛁 Bath & Brushing</span>
+                                        <span class="addon-price">+300 UAH</span>
+                                    </div>
+                                </label>
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="Hourly photo report" data-price="100">
+                                    <div class="addon-content">
+                                        <span class="addon-title">📸 Hourly Photo Report</span>
+                                        <span class="addon-price">+100 UAH</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="calc-navigation">
+                                <button type="button" class="btn btn-secondary prev-step">&larr; Back</button>
+                                <button type="button" class="btn btn-primary" id="openBookingModal">Book Place Now</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Real-time Summary Box -->
+                    <div class="summary-box">
+                        <h3>Summary Order</h3>
+                        <ul class="summary-details">
+                            <li><span>Dog Size:</span> <strong id="summarySize">Medium (10-25 kg)</strong></li>
+                            <li><span>Daily Rate:</span> <strong id="summaryRate">400 UAH</strong></li>
+                            <li><span>Duration:</span> <strong id="summaryDays">3 days</strong></li>
+                            <li><span>Add-ons:</span> <strong id="summaryAddons">None</strong></li>
+                        </ul>
+                        <div class="total-price-box">
+                            <span>Total for <span id="summaryDaysTotal">3</span> days:</span>
+                            <h2 id="totalPrice">1200 UAH</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know before booking your dog's stay</p>
+                </div>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary>What vaccinations are required?</summary>
+                        <p>All dogs must be up-to-date with standard core vaccinations (Rabies, DHPP) and treated for fleas and ticks at least 3 days prior to check-in. Veterinary passport is required.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What should I bring with us?</summary>
+                        <p>Please bring your dog's regular food (to avoid stomach upset), favorite toy, bedding/bed, and leash. We provide bowls, water, and plenty of love!</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What happens if my dog gets homesick or sad?</summary>
+                        <p>Our experienced sitters give extra cuddles, engage in favorite games, and offer high-value treats to keep spirits high. We also immediately contact you if any unusual behavior persists.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I visit before booking?</summary>
+                        <p>Yes, absolutely! We welcome introductory visits so you can inspect our premises, meet Marina, and let your dog get familiar with the environment.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon">🐾</span> Happy Paw
+                </a>
+                <p>Professional and cozy home hotel for dogs. Your pet's home away from home.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>📍 12 Cozy Lane, Dogville</p>
+                <p>📞 Phone: +380 (67) 123-45-67</p>
+                <p>✉️ Email: marina@happypaw.hotel</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="social-links">
+                    <a href="https://t.me/" target="_blank" class="social-btn telegram">Telegram Chat</a>
+                    <a href="https://viber.com/" target="_blank" class="social-btn viber">Viber Chat</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Happy Paw Dog Hotel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal Form -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="closeModal">&times;</button>
+            <h3>Complete Your Booking Request</h3>
+            <p>Please enter your contact details. Marina will receive your request instantly.</p>
+            
+            <form id="bookingForm" action="https://formspree.io/f/your-form-id" method="POST">
+                <!-- Hidden fields for calculated parameters -->
+                <input type="hidden" name="dog_size" id="formDogSize" value="Medium">
+                <input type="hidden" name="duration_days" id="formDuration" value="3">
+                <input type="hidden" name="selected_addons" id="formAddons" value="None">
+                <input type="hidden" name="total_price" id="formTotalPrice" value="1200 UAH">
+
+                <div class="form-group">
+                    <label for="ownerName">Your Name *</label>
+                    <input type="text" id="ownerName" name="owner_name" required placeholder="e.g. John Smith">
+                </div>
+
+                <div class="form-group">
+                    <label for="ownerPhone">Phone Number *</label>
+                    <input type="tel" id="ownerPhone" name="owner_phone" required placeholder="+380XXXXXXXXX">
+                    <span class="form-hint" id="phoneHint">Enter a valid phone number (e.g. +380501234567)</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dogName">Dog's Name & Breed *</label>
+                    <input type="text" id="dogName" name="dog_name" required placeholder="e.g. Charlie (Golden Retriever)">
+                </div>
+
+                <button type="submit" id="submitBookingBtn" class="btn btn-primary btn-block" disabled>Submit Request</button>
+            </form>
+            <div id="formSuccessMessage" class="success-message hidden">
+                <h4>🎉 Thank you!</h4>
+                <p>Your request has been successfully sent to Marina. She will contact you shortly!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
